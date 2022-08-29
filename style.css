@@ -40,30 +40,25 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 
-.item {
-  flex: 1;
-  margin: 15px;
-}
 
-.item-double {
-  flex: 2;
-  margin: 15px;
-}
 
-grid {
-  display: flex;
-  flex-direction: column;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  
 }
 .grid-container {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .gird-item {
+  display: grid;
   width: 59%;
   padding-bottom: 59%; /* Same as width, sets height */
   margin-bottom: 2%; /* (100-32*3)/2 */
@@ -149,18 +144,29 @@ img {
   width: 100%;
   
 }
-/* @media all and (min-width: 480px) {
+@media all and (min-width: 480px) {
   section,
   .group {
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
   }
-} */
+}
 @media all and (min-width: 800px) {
   section,
   .group {
     display: flex;
     flex-direction: row;
-    ;
+    padding: 10px;
+    justify-content: center;
+  }
+  .item {
+    flex: 1;
+    margin: 15px;
+  }
+  
+  .item-double {
+    flex: 2;
+    margin: 15px;
   }
   header {
     display: flex;
